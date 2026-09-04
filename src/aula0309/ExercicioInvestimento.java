@@ -17,16 +17,16 @@ import java.util.Scanner;
 public class ExercicioInvestimento {
     static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double p, r,n;
+        double p,r,n;
         System.out.println("Capital: ");
         p = sc.nextDouble();
         System.out.println("taxa anual em (%)");
         r = sc.nextDouble();
         System.out.println("Tempo (anos): ");
         n = sc.nextInt();
-        r = r / 100;
+        double porc = r / 100;
         for (int i = 1; i <= n; i++ ){
-            double a = (p * Math.pow(1 + r, i));
+            double a = (p * Math.pow(1 + porc, i));
             System.out.printf(String.format("\n montante no ano" + " " + i  + " " + "é igual a :  %.2f", a  ));
         }
     }
